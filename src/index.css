@@ -1,0 +1,45 @@
+:root {
+  --page-bg: #efefef;
+  --surface: #ffffff;
+  --text: #111111;
+  --text-muted: #767676;
+  --border: rgba(0, 0, 0, 0.08);
+  --save: #e60023;
+  --save-hover: #ad081b;
+  --header-height: 72px;
+  --radius-pill: 9999px;
+  --radius-card: 20px;
+  --gap: 16px;
+  --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.08);
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--page-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100svh;
+  width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+}
