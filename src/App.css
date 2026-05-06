@@ -401,6 +401,44 @@
   overflow: hidden;
 }
 
+.pin__media--h-a {
+  min-height: 170px;
+}
+.pin__media--h-b {
+  min-height: 220px;
+}
+.pin__media--h-c {
+  min-height: 280px;
+}
+.pin__media--h-d {
+  min-height: 340px;
+}
+.pin__media--h-e {
+  min-height: 410px;
+}
+.pin__media--h-f {
+  min-height: 500px;
+}
+
+.pin--feature .pin__media--h-a {
+  min-height: 230px;
+}
+.pin--feature .pin__media--h-b {
+  min-height: 290px;
+}
+.pin--feature .pin__media--h-c {
+  min-height: 360px;
+}
+.pin--feature .pin__media--h-d {
+  min-height: 430px;
+}
+.pin--feature .pin__media--h-e {
+  min-height: 510px;
+}
+.pin--feature .pin__media--h-f {
+  min-height: 620px;
+}
+
 /* Varied masonry heights — swap this block for a real <img class="pin__img"> */
 .pin__placeholder {
   position: relative;
@@ -520,8 +558,9 @@
 .pin__img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   vertical-align: middle;
+  object-fit: cover;
 }
 
 .pin__bar {

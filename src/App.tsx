@@ -141,17 +141,20 @@ function IconMic() {
 function ProductPin({ product: p }: { product: Product }) {
   const { height, tone } = layoutFromId(p.id)
   const label = p.title?.trim() || 'Product'
+  const [imageFailed, setImageFailed] = useState(false)
+  const isFeatured = tone % 8 === 0
 
   return (
-    <article className="pin" role="listitem">
-      <div className="pin__media">
-        {p.imageUrl ? (
+    <article className={`pin${isFeatured ? ' pin--feature' : ''}`} role="listitem">
+      <div className={`pin__media pin__media--h-${height}`}>
+        {p.imageUrl && !imageFailed ? (
           <img
             className="pin__img"
             src={p.imageUrl}
             alt={label}
             loading="lazy"
             decoding="async"
+            onError={() => setImageFailed(true)}
           />
         ) : (
           <div
